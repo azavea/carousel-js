@@ -268,7 +268,7 @@ FINN.carousel = FINN.carousel || {};
 
 FINN.carousel = FINN.carousel || {};
 
-(function(C) {
+(function(C, $) {
     "use strict";
     function sendToGallery(e) {
         var targetUrl = $(e.target).data("gallery-url");
@@ -279,9 +279,9 @@ FINN.carousel = FINN.carousel || {};
     C.setupClickToGallery = function(carousel) {
         $(carousel).on("click", sendToGallery);
     };
-})(FINN.carousel);
+})(FINN.carousel, jQuery);
 
-(function(C) {
+(function(C, $) {
     "use strict";
     C.setupClickableElementNavigation = function(controller, root, element, selector, getElementIndexOverride) {
         var selected = selector || "selectedElement";
@@ -299,7 +299,7 @@ FINN.carousel = FINN.carousel || {};
             $(root).children().removeClass(selected).eq(index).addClass(selected);
         });
     };
-})(FINN.carousel);
+})(FINN.carousel, jQuery);
 
 FINN.carousel = FINN.carousel || {};
 
